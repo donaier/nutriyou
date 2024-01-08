@@ -184,28 +184,28 @@ main {
     gap: 20px;
     position: relative;
     overflow: scroll;
-
-    @media (max-width: 1200px) {
-      left: -100px;
-    }
-
-    @media (max-width: 1000px) {
-      left: -50px;
-    }
-
-    @media (max-width: 650px) {
-      left: -50px;
-    }
-
-    @media (max-width: 420px) {
-      left: -20px;
-    }
 }
 
 .bewertung-container {
   position: relative;
   width: 100vw;
   left: -150px;
+
+  @media (max-width: 1200px) {
+    left: -100px;
+  }
+
+  @media (max-width: 1000px) {
+    left: -50px;
+  }
+
+  @media (max-width: 650px) {
+    left: -50px;
+  }
+
+  @media (max-width: 420px) {
+    left: -20px;
+  }
 }
 
 .bewertung-container::before {
