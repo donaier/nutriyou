@@ -180,15 +180,54 @@ main {
 .bewertung {
     display: flex;
     flex-direction: row;
-    justify-content: center;
+    justify-content: flex-start;
     gap: 20px;
     position: relative;
-    margin-left: -50px;
-    width: 100vw;
-
-    /* carousell? */
     overflow: scroll;
 
+    @media (max-width: 1200px) {
+      left: -100px;
+    }
+
+    @media (max-width: 1000px) {
+      left: -50px;
+    }
+
+    @media (max-width: 650px) {
+      left: -50px;
+    }
+
+    @media (max-width: 420px) {
+      left: -20px;
+    }
+}
+
+.bewertung-container {
+  position: relative;
+  width: 100vw;
+  left: -150px;
+}
+
+.bewertung-container::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 150px;
+  right: 0;
+  background: linear-gradient(to right, transparent, #222);
+  z-index: 1;
+}
+
+.bewertung-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 150px;
+  left: 0;
+  background: linear-gradient(to left, transparent, #222);
+  z-index: 1;
 }
 
 .bewertung1 {
@@ -201,24 +240,3 @@ main {
     gap: 20px;
     min-width: 33%;
 }
-
-
-/* .bewertung::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 20%;
-    right: -20px;
-    background: linear-gradient(to right, transparent, #222);
-}
-
-.bewertung::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    width: 20%;
-    left: -20px;
-    background: linear-gradient(to left, transparent, #222);
-} */
